@@ -6,11 +6,10 @@ import logo from '../logo.svg';
 import '../App.css';
 import { useForm, SubmitHandler } from "react-hook-form";
 import toast, { Toaster } from 'react-hot-toast';
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import { Navigate } from "react-router-dom";
 const notifyError = () => toast.error('Verifier votre mots de passe');
 const notifySucces = () => toast.success('Inscription reussi');
-import { useNavigate } from "react-router-dom";
 export default function SingUp() {
   const navigate = useNavigate();
     const {
@@ -29,11 +28,9 @@ export default function SingUp() {
               toast.error("un compte existe déjà avec cette adresse")
               
             }else{
-              axios.post("http://localhost:3000/utilisateur", data).then((res)=>{
-                console.log(res);
-                notifySucces();
-                
-              })
+              axios.post("http://localhost:3000/utilisateur", data);
+              notifySucces();
+              navigate("/login")
             }
           })
         }

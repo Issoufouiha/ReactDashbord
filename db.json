@@ -6,13 +6,6 @@
       "Password": "12345",
       "ConfirmationPassword": "12345",
       "id": 1
-    },
-    {
-      "Names": "Issoufou",
-      "email": "ayoubaissoufou1@gmail.com",
-      "Password": "54321",
-      "ConfirmationPassword": "54321",
-      "id": 2
-    } 
+    }
   ]
 }
