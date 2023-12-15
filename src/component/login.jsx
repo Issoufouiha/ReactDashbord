@@ -13,6 +13,8 @@ const notifySucces = () => toast.success('Connexion reussi');
 export default function SingUp() {
   const navigate = useNavigate();
   useEffect(()=>{
+    if(!localStorage.getItem('utilisateur'))
+    navigate('/login')
     
   })
     const {
@@ -20,23 +22,25 @@ export default function SingUp() {
         handleSubmit,
       } = useForm();
       const onSubmit = data => {
-        axios.get(`http://localhost:3000/utilisateur?email=${data.email} & Password ${data.Password}`).then((res)=>{
+        axios.get(`http://localhost:3000/utilisateur?email=${data.email}&Password=${data.Password}`).then((res)=>{
           if (res.data.length > 0) {
             localStorage.setItem("utilisateur", JSON.stringify(res.data[0]));
-            navigate('/dashbord')
+            navigate('/dashbord');
+            <Toaster/>
             notifySucces();
             
           }else{
+            <Toaster/>
             notifyError();
           }
         })
 
       };
       return (
-    <div>
+    <div style={{marginTop:'10rem'}}>
         <form onSubmit= {handleSubmit(onSubmit)} style={{flexDirection:'column', display:'flex', gap:'1rem', margin:'auto', width:'20rem'}}>
             <h1 className='text-cente'>SingUp</h1>
-            <TextField id="outlined-basic" label="email" variant="outlined" {...register("email", { required: true, pattern:/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+            <TextField id="outlined-basic" label="email" variant="outlined" {...register("email", { required: true, 
  } )} />
             <TextField id="outlined-basic" label="Password" variant="outlined" {...register("Password",{ required: "Veuillez saisir un mots de passe", 
             minLength:{value:5, message:"Veuillez saisir un mots de passe de plus de 5"} })}  />

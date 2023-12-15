@@ -6,6 +6,20 @@
       "Password": "12345",
       "ConfirmationPassword": "12345",
       "id": 1
+    },
+    {
+      "Names": "Issoufou",
+      "email": "ayoubaissoufou1@gmail.com",
+      "Password": "12345",
+      "ConfirmationPassword": "12345",
+      "id": 2
+    },
+    {
+      "Names": "Ayouba",
+      "email": "contact@mundo-markket.com",
+      "Password": "12345",
+      "ConfirmationPassword": "12345",
+      "id": 3
     }
   ]
 }
