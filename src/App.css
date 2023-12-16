@@ -45,3 +45,13 @@
     transform: rotate(360deg);
   }
 }
+#publierForms{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 2rem;
+  flex-direction: column;
+  width: 60%;
+}
+
