@@ -21,5 +21,25 @@
       "ConfirmationPassword": "12345",
       "id": 3
     }
+  ],
+  "publications": [
+    {
+      "myPublication": "je suis tres fort met",
+      "URL": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.freepik.com%2Fphotos-vecteurs-libre%2Fetudiant&psig=AOvVaw10oHCsxKa0flgexcvYZRmY&ust=1702839522564000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCMD5jtnRlIMDFQAAAAAdAAAAABAE",
+      "idUtlisateur": 1,
+      "datePublication": "2023-12-16T19:05:36.010Z",
+      "likePublication": 0,
+      "auteur": "Ayouba",
+      "id": 1
+    },
+    {
+      "myPublication": "lorem de moi et toi",
+      "URL": "https://img.freepik.com/photos-gratuite/groupe-multiethnique-jeunes-hommes-femmes-etudiant-interieur_1139-989.jpg",
+      "idUtlisateur": 1,
+      "datePublication": "2023-12-16T19:18:48.678Z",
+      "likePublication": 0,
+      "auteur": "Ayouba",
+      "id": 2
+    }
   ]
 }
