@@ -40,6 +40,33 @@
       "likePublication": 0,
       "auteur": "Ayouba",
       "id": 2
+    },
+    {
+      "myPublication": "lorem moi est egalement",
+      "URL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzvzPgJ1yq0g9cRIzVXGuFlK_nbv8oc2YvkIHjRuk1hg&s",
+      "idUtlisateur": 1,
+      "datePublication": "2023-12-17T00:23:31.128Z",
+      "likePublication": 0,
+      "auteur": "Ayouba",
+      "id": 3
+    },
+    {
+      "myPublication": "sdv lknvldkndlfnfdvndkjvnndknvdk",
+      "URL": "mlv,dknvkldfnkdnkvd",
+      "idUtlisateur": 1,
+      "datePublication": "2023-12-17T00:44:16.503Z",
+      "likePublication": 0,
+      "auteur": "Ayouba",
+      "id": 4
+    },
+    {
+      "myPublication": ",clksdnkjvbdkjfbnfdklnbkdkbgnbncn v",
+      "URL": "vkdjnkjxdfbvjhbfjdbnjfbdbfnd",
+      "idUtlisateur": 1,
+      "datePublication": "2023-12-17T01:20:39.806Z",
+      "likePublication": 0,
+      "auteur": "Ayouba",
+      "id": 5
     }
   ]
 }

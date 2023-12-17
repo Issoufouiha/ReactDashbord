@@ -7,7 +7,10 @@ import SingUp from './component/SingUp';
 import Login from './component/login';
 import App from './App'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Toaster } from 'react-hot-toast';
+import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path:'/',
@@ -29,9 +32,12 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Toaster/>
-    <RouterProvider router={router}>
-    </RouterProvider>
+    <QueryClientProvider client={queryClient}>
+        <Toaster/>
+        <RouterProvider router={router}>
+        </RouterProvider>
+        <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   </React.StrictMode>
 );
 

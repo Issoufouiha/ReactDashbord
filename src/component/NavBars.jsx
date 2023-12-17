@@ -6,12 +6,9 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import Switch from '@mui/material/Switch';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormGroup from '@mui/material/FormGroup';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 
 export default function NavBars() {
     const navigate = useNavigate();
@@ -27,8 +24,8 @@ export default function NavBars() {
   };
 
   const handleClose = () => {
-    setAnchorEl(null);
-    navigate('login');
+    localStorage.removeItem('utilisateur');
+    navigate('/login')
   };
 
   return (
@@ -74,7 +71,7 @@ export default function NavBars() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Profile</MenuItem>
+               <MenuItem>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>Deconnexion</MenuItem>
               </Menu>
             </div>
