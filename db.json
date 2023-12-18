@@ -67,6 +67,51 @@
       "likePublication": 0,
       "auteur": "Ayouba",
       "id": 5
+    },
+    {
+      "myPublication": "moimoimoimoimoimoimoimoimoimoimoi",
+      "URL": "moimoimoimoimoimoimoimoimoimoimoimoimoimoi",
+      "idUtlisateur": 1,
+      "datePublication": "2023-12-18T14:39:40.903Z",
+      "likePublication": 0,
+      "auteur": "Ayouba",
+      "id": 6
+    },
+    {
+      "myPublication": "moimoimoimoimoimoimoimoimoimoimoi",
+      "URL": "moimoimoimoimoimoimoimoimoimoimoimoimoimoi",
+      "idUtlisateur": 1,
+      "datePublication": "2023-12-18T14:39:42.743Z",
+      "likePublication": 0,
+      "auteur": "Ayouba",
+      "id": 7
+    },
+    {
+      "myPublication": "Aujourd'hui c'est un autre jours",
+      "URL": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffr.freepik.com%2Fphotos-vecteurs-libre%2Fetudiant&psig=AOvVaw2anR-OCfuIAOzvIb8M6Pva&ust=1702998053063000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCPi7t6KgmYMDFQAAAAAdAAAAABAE",
+      "idUtlisateur": 1,
+      "datePublication": "2023-12-18T15:03:45.436Z",
+      "likePublication": 0,
+      "auteur": "Ayouba",
+      "id": 8
+    },
+    {
+      "myPublication": "je suis le meuilleur developpeur au Niger",
+      "URL": "https://img.freepik.com/photos-gratuite/jeune-femme-etudiante-sac-dos-tenant-main-pouce-vers-haut-isole-mur-blanc_231208-11498.jpg?w=740&t=st=1702911933~exp=1702912533~hmac=376706b69b237b46fd6114dcc58790ed7cb4e76656456f98e5da799c7a37fcf8",
+      "idUtlisateur": 1,
+      "datePublication": "2023-12-18T15:08:22.587Z",
+      "likePublication": 0,
+      "auteur": "Ayouba",
+      "id": 9
+    },
+    {
+      "myPublication": "qkjnckjdsjvndsnjdsndfkvddnfkjdv",
+      "URL": "sdkjnvknfdkjvkjdkjvnkjdfkdvjdvfk",
+      "idUtlisateur": 1,
+      "datePublication": "2023-12-18T16:16:09.340Z",
+      "likePublication": 0,
+      "auteur": "Ayouba",
+      "id": 10
     }
   ]
 }

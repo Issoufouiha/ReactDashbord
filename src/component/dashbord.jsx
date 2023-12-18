@@ -8,18 +8,18 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import {useQueryClient, useQuery,useMutation} from '@tanstack/react-query';
-export default function Dashbord() {
+export default function Dashbord({publication}) {
   const user = JSON.parse(localStorage.getItem("utilisateur"))
   const {register, handleSubmit, reset} = useForm();
   const navigate = useNavigate();
-  const queryClient = useQueryClient();
+   const queryClient = useQueryClient();
   const {data: publications, isLoading} = useQuery({
     queryKey : ["pulications"],
     queryFn:()=> axios.get('http://localhost:3000/publications').then((res)=> res.data)
   })
-  const mutation = useMutation({
-    nutationFn: (pub)=>{
-     return axios.post('http://localhost:3000/publications', pub)
+  const mutation1 = useMutation({
+    mutationFn: (pub)=>{
+     return axios.post('http://localhost:3000/publications', pub);
     },
     onError: (error)=>{
       toast.error(' Une erreur est survenu');
@@ -30,6 +30,7 @@ export default function Dashbord() {
       toast.success('Pulication ajouter'); 
       <Toaster/>
       reset();
+      queryClient.invalidateQueries("publications");
     }
   })
   if (isLoading){
@@ -44,14 +45,19 @@ export default function Dashbord() {
       likePublication: 0,
       auteur:user.Names,
     }
-    mutation.mutate(allPublication);
+    mutation1.mutate(allPublication);
   }
-  // useEffect(()=>{
+  // useEffect(()=>{ 
   //   if(!localStorage.getItem('utilisateur')){
   //     navigate('/login');
   //   }
 
   // });
+  let putrier = publications.sort((a,b)=> {
+    return new Date(b.datePublication) - new Date(a.datePublication);
+
+  });
+
   return (
     <div>
       <NavBars/>
@@ -64,11 +70,11 @@ export default function Dashbord() {
 
       </form>
       <div style={{justifyContent:'center', alignItems:'center', margin:'auto', display:'flex', flexDirection:'column',justifyContent:'space-between', gap:'30px'}}>
-        {publications.map((autre) =><div style={{backgroundColor:'white', padding:'10px'}}>
-          <span>{autre.auteur}</span>
-          <p> {autre.myPublication} </p>
-          <img src= {autre.URL} alt="PhotPublication" style={{width:'600px'}} />
-          <span> {autre.datePublication} </span>
+        {publications&& putrier.map((publication) => <div style={{backgroundColor:'white', padding:'10px'}}>
+          <span>{publication.auteur}</span>
+          <p> {publication.myPublication} </p>
+          <img src= {publication.URL} alt="PhotPublication" style={{width:'600px'}} />
+          <span> {publication.datePublication} </span>
         </div>
         )}
       </div>
