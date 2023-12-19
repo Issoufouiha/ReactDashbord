@@ -54,4 +54,13 @@
   flex-direction: column;
   width: 60%;
 }
-
+.profilDiv{
+  background-color: white;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+  margin-top: 2rem;
+}

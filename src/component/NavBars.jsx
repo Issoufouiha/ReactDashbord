@@ -9,6 +9,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import { useNavigate,Link } from "react-router-dom";
+import Profilt from "./profilt";
 
 export default function NavBars() {
     const navigate = useNavigate();
@@ -26,6 +27,10 @@ export default function NavBars() {
   const handleClose = () => {
     localStorage.removeItem('utilisateur');
     navigate('/login')
+  };
+  const clikeProfilt = () => {
+    navigate('/profilt');
+    
   };
 
   return (
@@ -71,7 +76,7 @@ export default function NavBars() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-               <MenuItem>Profile</MenuItem>
+               <MenuItem onClick={clikeProfilt}>Profile</MenuItem>
                 <MenuItem onClick={handleClose}>Deconnexion</MenuItem>
               </Menu>
             </div>

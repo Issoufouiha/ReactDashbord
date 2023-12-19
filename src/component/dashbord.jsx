@@ -8,7 +8,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import toast, { Toaster } from 'react-hot-toast';
 import {useQueryClient, useQuery,useMutation} from '@tanstack/react-query';
-export default function Dashbord({publication}) {
+export default function Dashbord() {
   const user = JSON.parse(localStorage.getItem("utilisateur"))
   const {register, handleSubmit, reset} = useForm();
   const navigate = useNavigate();

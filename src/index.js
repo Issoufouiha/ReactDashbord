@@ -10,6 +10,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { Toaster } from 'react-hot-toast';
 import {QueryClient, QueryClientProvider,} from '@tanstack/react-query';
+import Profilt from "./component/profilt";
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
   },
   {
     path:'/dashbord',
-    element:<Dashbord/>
+    element:<Dashbord/>,
+  },
+  {
+    path:'/profilt',
+    element:<Profilt/>,
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
